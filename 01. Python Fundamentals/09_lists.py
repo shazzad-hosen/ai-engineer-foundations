@@ -13,7 +13,7 @@ print(marks[1])
 # slicing in a list
 print(marks[0 : 4]) # ending index is not included
 
-print(marks) # slicing doesn't harm to the original list items
+print(marks) # slicing doesn't harm to original list items
 
 person = ["Shazzad Hosen", 21, "programmer", True]
 print(person)
