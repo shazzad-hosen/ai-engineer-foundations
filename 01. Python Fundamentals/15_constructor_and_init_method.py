@@ -15,7 +15,8 @@ class Person:
     def __init__(self, name, age): # parameterized constructor
         self.name = name
         self.age = age
-        
+    
+    # instance method -> self is required as first parameter
     def greet(self):
         print(f"Hello, {self.name}")
         
