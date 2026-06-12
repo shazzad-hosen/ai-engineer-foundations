@@ -1,19 +1,27 @@
 class Laptop:
     storage_type = "SSD"
-    
+
     def __init__(self, ram, storage):
         self.ram = ram
         self.storage = storage
-        
+
     # instance method -> can access instance attributes as well as class attributes
-    def get_info(self): 
-        print(f"laptop has {self.ram} RAM & {self.storage} {self.storage_type}")
-        
+    def get_info(self):
+        print(
+            f"laptop has {self.ram} RAM & {self.storage} {self.storage_type}")
+
     # class method -> can only access class attributes
-    @classmethod # decorator function -> that makes the following method a class method
+    @classmethod  # decorator function -> that makes the following method a class method
     def get_storage_type(cls):
         print(f"storage type is: {cls.storage_type}")
-        
+
+    # static methos -> a standalone method inside of a class, can't access class, instance attributes
+    @staticmethod
+    def calculate_discount(price, discount_amount):
+        final_price = price - (discount_amount * price / 100)
+        print(f"final price is {final_price}")
+
+
 laptop1 = Laptop("128GB", "4TB")
 laptop2 = Laptop("64GB", "1TB")
 
@@ -24,3 +32,6 @@ laptop2.get_info()
 # calling class methods
 laptop1.get_storage_type()
 Laptop.get_storage_type()
+
+# calling static methods
+laptop1.calculate_discount(40_000, 10)
