@@ -1,0 +1,4 @@
+this is a sample file
+to store some random
+texts to do a simple
+activity with python
